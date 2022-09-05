@@ -1,0 +1,10 @@
+.restart-btn {
+    color: var(--light-blue);
+    font-family: var(--default-font);
+    font-size: var(--interface-text-size);
+}
+
+.restart-btn:hover {
+    color: var(--yellow);
+    cursor: pointer;
+}

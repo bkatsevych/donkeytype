@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #053f5c;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.wrapper {
+  width: 990px;
+  padding: 35px;
+  font-size: 1.5rem;
+}
+
+.wrapper .content-box {
+  font-family: "Source Code Pro";
+  padding: 13px 20px 0;
+  border-radius: 10px;
+  color: #429ebd;
+}
+
+.wrapper .content-box .typing-text {
+  max-height: 175px;
+  overflow-y: auto;
+}
+
+.wrapper .content-box .typing-text::-webkit-scrollbar {
+  width: 0;
+}
+
+.wrapper .content-box .typing-text p {
+  text-align: justify;
+  word-break: break-all;
+}
+
+.wrapper .content-box .content {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+}
+
+.wrapper .content-box .content .result-details {
+  display: flex;
+  width: calc(100% - 160px);
+  justify-content: space-between;
+}
+
+.wrapper .content-box .content .result-details li {
+  display: flex;
+}
+
+.wrapper .content-box .content .result-details li span {
+  display: block;
+  margin-left: 10px;
+}
+
+.restart-btn {
+  color: var(--light-blue);
+  font-family: var(--default-font);
+  font-size: var(--interface-text-size);
+}
+
+.restart-btn:hover {
+  color: var(--yellow);
+  cursor: pointer;
+}
