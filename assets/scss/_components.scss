@@ -1,10 +1,44 @@
 .restart-btn {
-    color: var(--light-blue);
-    font-family: var(--default-font);
-    font-size: var(--interface-text-size);
+    color: $light-blue;
+    font-family: $default-font;
+    font-size: $interface-text-size;
+
+    &:hover {
+        color: $yellow;
+        cursor: pointer;
+    }
 }
 
-.restart-btn:hover {
-    color: var(--yellow);
-    cursor: pointer;
+.correct-char {
+    color: $yellow;
+}
+
+.incorrect-char {
+    color: $lightest-blue;
+}
+
+.typing-text {
+    span {
+        position: relative;
+    }
+}
+
+.cursor {
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 3px;
+        height: 30px;
+        background: $yellow;
+        opacity: 0;
+        animation: blink 1s ease-in-out infinite;
+    }
+}
+
+@keyframes blink {
+    50% {
+        opacity: 1;
+    }
 }

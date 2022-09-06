@@ -39,55 +39,85 @@ button {
   font-size: 1.5rem;
 }
 
-.wrapper .content-box {
+.content-box {
   font-family: "Source Code Pro";
   padding: 13px 20px 0;
   border-radius: 10px;
   color: #429ebd;
 }
 
-.wrapper .content-box .typing-text {
-  max-height: 175px;
+.typing-text {
+  max-height: 125px;
   overflow-y: auto;
 }
 
-.wrapper .content-box .typing-text::-webkit-scrollbar {
+.typing-text::-webkit-scrollbar {
   width: 0;
 }
 
-.wrapper .content-box .typing-text p {
+.typing-text p {
   text-align: justify;
   word-break: break-all;
 }
 
-.wrapper .content-box .content {
+.content {
   display: flex;
   justify-content: space-between;
   padding: 40px 0;
 }
 
-.wrapper .content-box .content .result-details {
+.result-details {
   display: flex;
   width: calc(100% - 160px);
   justify-content: space-between;
 }
 
-.wrapper .content-box .content .result-details li {
+.result-details li {
   display: flex;
 }
 
-.wrapper .content-box .content .result-details li span {
+.result-details li span {
   display: block;
   margin-left: 10px;
 }
 
 .restart-btn {
-  color: var(--light-blue);
-  font-family: var(--default-font);
-  font-size: var(--interface-text-size);
+  color: #429ebd;
+  font-family: "Source Code Pro";
+  font-size: 1.5rem;
 }
 
 .restart-btn:hover {
-  color: var(--yellow);
+  color: #f7ad19;
   cursor: pointer;
+}
+
+.correct-char {
+  color: #f7ad19;
+}
+
+.incorrect-char {
+  color: #9fe7f5;
+}
+
+.typing-text span {
+  position: relative;
+}
+
+.cursor::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 30px;
+  background: #f7ad19;
+  opacity: 0;
+  animation: blink 1s ease-in-out infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 1;
+  }
 }

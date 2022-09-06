@@ -2,46 +2,46 @@
     width: 990px;
     padding: 35px;
     font-size: $interface-text-size;
+}
 
-    .content-box {
-        font-family: $default-font;
-        padding: 13px 20px 0;
-        border-radius: 10px;
-        color: $light-blue;
+.content-box {
+    font-family: $default-font;
+    padding: 13px 20px 0;
+    border-radius: 10px;
+    color: $light-blue;
+}
 
-        .typing-text {
-            max-height: 175px;
-            overflow-y: auto;
+.typing-text {
+    max-height: 125px;
+    overflow-y: auto;
 
-            &::-webkit-scrollbar {
-                width: 0;
-            }
+    &::-webkit-scrollbar {
+        width: 0;
+    }
 
-            p {
-                text-align: justify;
-                word-break: break-all;
-            }
-        }
+    p {
+        text-align: justify;
+        word-break: break-all;
+    }
+}
 
-        .content {
-            display: flex;
-            justify-content: space-between;
-            padding: 40px 0;
+.content {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+}
 
-            .result-details {
-                display: flex;
-                width: calc(100% - 160px);
-                justify-content: space-between;
+.result-details {
+    display: flex;
+    width: calc(100% - 160px);
+    justify-content: space-between;
 
-                li {
-                    display: flex;
+    li {
+        display: flex;
 
-                    span {
-                        display: block;
-                        margin-left: 10px;
-                    }
-                }
-            }
+        span {
+            display: block;
+            margin-left: 10px;
         }
     }
 }
