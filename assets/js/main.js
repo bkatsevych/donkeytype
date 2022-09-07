@@ -1,7 +1,9 @@
 const typingText = document.querySelector(".typing-text");
 const inputField = document.querySelector(".input-field");
+const mistakesTag = document.querySelector(".mistakes span");
 
 let charIndex = 0;
+let mistakes = 0;
 
 function randomParahraph() {
     let randIndex = Math.floor(Math.random() * paragraphs.length);
@@ -19,6 +21,11 @@ function initTyping() {
 
     if (typedChar == null) {
         charIndex--;
+
+        if (characters[charIndex].classList.contains("incorrect-char")) {
+            mistakes--;
+        }
+
         characters[charIndex].classList.remove(
             "correct-char",
             "incorrect-char"
@@ -27,6 +34,7 @@ function initTyping() {
         if (characters[charIndex].innerText === typedChar) {
             characters[charIndex].classList.add("correct-char");
         } else {
+            mistakes++;
             characters[charIndex].classList.add("incorrect-char");
         }
         charIndex++;
@@ -34,6 +42,8 @@ function initTyping() {
 
     characters.forEach((span) => span.classList.remove("cursor"));
     characters[charIndex].classList.add("cursor");
+
+    mistakesTag.innerHTML = mistakes;
 }
 
 randomParahraph();
