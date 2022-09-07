@@ -79,10 +79,10 @@ function resetGame() {
     inputField.value = "";
     clearInterval(timer);
     timeLeft = maxTime;
-    charIndex = mistakes;
+    charIndex = 0;
     isTyping = false;
     timerTag.innerText = timeLeft;
-    mistakesTag.innerText = mistakes;
+    mistakesTag.innerText = 0;
     cpmTag.innerText = 0;
 }
 
