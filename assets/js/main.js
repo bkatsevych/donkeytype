@@ -1,9 +1,14 @@
 const typingText = document.querySelector(".typing-text");
 const inputField = document.querySelector(".input-field");
 const mistakesTag = document.querySelector(".mistakes span");
+const timerTag = document.querySelector(".timer span");
 
 let charIndex = 0;
 let mistakes = 0;
+let isTyping = false;
+let timer;
+let maxTime = 60;
+let timeLeft = maxTime;
 
 function randomParahraph() {
     let randIndex = Math.floor(Math.random() * paragraphs.length);
@@ -18,6 +23,11 @@ function randomParahraph() {
 function initTyping() {
     const characters = typingText.querySelectorAll("span");
     let typedChar = inputField.value.split("")[charIndex];
+
+    if (!isTyping) {
+        timer = setInterval(initTimer, 1000);
+        isTyping = true;
+    }
 
     if (typedChar == null) {
         charIndex--;
@@ -43,7 +53,16 @@ function initTyping() {
     characters.forEach((span) => span.classList.remove("cursor"));
     characters[charIndex].classList.add("cursor");
 
-    mistakesTag.innerHTML = mistakes;
+    mistakesTag.innerText = mistakes;
+}
+
+function initTimer() {
+    if (timeLeft > 0) {
+        timeLeft--;
+        timerTag.innerText = timeLeft;
+    } else {
+        clearInterval(timer);
+    }
 }
 
 randomParahraph();
