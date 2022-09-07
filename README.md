@@ -7,14 +7,19 @@ Donkeytype is a primitive clone of a well-known typing trainer [Monkeytype](http
 
 ## Demo
 
+The project is hosted on GitHub Pages and currently available by [this link](https://bkatsevych.github.io/donkeytype/)
+
 > _work in progress_
 
 ## Todos
 
+-   Polished styling
 -   WPM counter
 -   Adequate logo
 -   Misspelled words underlining
--   Themes
+-   Theming
+-   Capslock warning
+-   Removing text by words
 
 ## Assets
 
