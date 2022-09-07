@@ -76,11 +76,10 @@ function initTimer() {
 
 function resetGame() {
     randomParaghraph();
-    inputField.value = "";
     clearInterval(timer);
     timeLeft = maxTime;
-    charIndex = 0;
-    isTyping = false;
+    charIndex = mistakes = isTyping = 0;
+    inputField.value = "";
     timerTag.innerText = timeLeft;
     mistakesTag.innerText = 0;
     cpmTag.innerText = 0;
